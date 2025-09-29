@@ -1,0 +1,1878 @@
+{
+	"info": {
+		"_postman_id": "06432913-25ff-4b2e-9727-b3f68398ecb7",
+		"name": "API Evermos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46094065"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama\": \"Tes1\",\n    \"email\": \"Tes1@contoh.com\",\n    \"notelp\": \"12345\",\n    \"kata_sandi\": \"Tes123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"Tes1\",\n    \"email\": \"Tes1@contoh.com\",\n    \"notelp\": \"12345\",\n    \"kata_sandi\": \"Tes123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 09:50:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "55"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Register berhasil\",\n    \"toko_id\": 2,\n    \"user_id\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNDAzMzYsInVzZXJfaWQiOjJ9.7WantrT8Qb0HNCM4ebb-oJ3P_X7nR_gOdMJGr8LMh2Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/users/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 10:59:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "865"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 2,\n    \"Nama\": \"Tes1\",\n    \"KataSandi\": \"$2a$10$9Z2PIusb3b8MSCbYjPgHKutQuDT3CN3tSFz3o67Lc.S6m4Ud3KEjK\",\n    \"NoTelp\": \"12345\",\n    \"TanggalLahir\": \"0001-01-01T00:00:00Z\",\n    \"JenisKelamin\": \"\",\n    \"Tentang\": \"\",\n    \"Pekerjaan\": \"\",\n    \"Email\": \"Tes1@contoh.com\",\n    \"IDProvinsi\": \"\",\n    \"IDKota\": \"\",\n    \"IsAdmin\": false,\n    \"CreatedAt\": \"2025-09-28T16:50:47.772+07:00\",\n    \"UpdatedAt\": \"2025-09-28T16:50:47.772+07:00\",\n    \"Toko\": {\n        \"ID\": 0,\n        \"IDUser\": 0,\n        \"NamaToko\": \"\",\n        \"URLFoto\": \"\",\n        \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n        \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n        \"Produk\": null,\n        \"DetailTrx\": null,\n        \"LogProduk\": null\n    },\n    \"Alamat\": null,\n    \"Trx\": {\n        \"ID\": 0,\n        \"IDUser\": 0,\n        \"AlamatPengiriman\": 0,\n        \"TotalHarga\": 0,\n        \"KodeInvoice\": \"\",\n        \"MethodBayar\": \"\",\n        \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n        \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n        \"DetailTrx\": {\n            \"ID\": 0,\n            \"IDTrx\": 0,\n            \"IDLogProduk\": 0,\n            \"IDToko\": 0,\n            \"Kuantitas\": 0,\n            \"HargaTotal\": 0,\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email_or_telp\": \"Tes1@contoh.com\",\n    \"kata_sandi\": \"Tes123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Tes1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_or_telp\": \"Tes1@contoh.com\",\n    \"kata_sandi\": \"Tes123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 09:52:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxMzk1NTgsInVzZXJfaWQiOjJ9.Q7dmHZHzurKcZGmkYBzkzXNALNEvRwn68PFfYFQZKp0\"\n}"
+				},
+				{
+					"name": "Response Tes",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_or_telp\": \"Tes@contoh.com\",\n    \"kata_sandi\": \"Tes123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 09:56:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxMzk4MDEsInVzZXJfaWQiOjF9.OjDTScpmCEHGE9vfr6LZjUPtGbh7I0Y9LRN-NLsSl0Q\"\n}"
+				},
+				{
+					"name": "Admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email_or_telp\": \"Admin@data.com\",\n    \"kata_sandi\": \"AdminEvermos\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 14:59:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNTc5NjcsInVzZXJfaWQiOjN9.H-b2Y5o9zyZwMCqRFjCWUzxbh7ddTzP4_voPxQgpNZU\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNDM1NjYsInVzZXJfaWQiOjJ9.mawdg4JdAkKeCQiX2fL8uyQzovGYn6rjE9qgHi122xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama\": \"Ini hasil Put User\",\n    \"notelp\": \"12345\",\n    \"email\": \"Tes1@contoh.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/users/me",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"Ini hasil Put User\",\n    \"notelp\": \"12345\",\n    \"email\": \"Tes1@contoh.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/users/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 11:40:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "929"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Profile updated successfully\",\n    \"user\": {\n        \"ID\": 2,\n        \"Nama\": \"Ini hasil Put User\",\n        \"KataSandi\": \"$2a$10$9Z2PIusb3b8MSCbYjPgHKutQuDT3CN3tSFz3o67Lc.S6m4Ud3KEjK\",\n        \"NoTelp\": \"12345\",\n        \"TanggalLahir\": \"0001-01-01T00:00:00Z\",\n        \"JenisKelamin\": \"\",\n        \"Tentang\": \"\",\n        \"Pekerjaan\": \"\",\n        \"Email\": \"Tes1@contoh.com\",\n        \"IDProvinsi\": \"\",\n        \"IDKota\": \"\",\n        \"IsAdmin\": false,\n        \"CreatedAt\": \"2025-09-28T16:50:47.772+07:00\",\n        \"UpdatedAt\": \"2025-09-28T18:40:53.462+07:00\",\n        \"Toko\": {\n            \"ID\": 0,\n            \"IDUser\": 0,\n            \"NamaToko\": \"\",\n            \"URLFoto\": \"\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"Produk\": null,\n            \"DetailTrx\": null,\n            \"LogProduk\": null\n        },\n        \"Alamat\": null,\n        \"Trx\": {\n            \"ID\": 0,\n            \"IDUser\": 0,\n            \"AlamatPengiriman\": 0,\n            \"TotalHarga\": 0,\n            \"KodeInvoice\": \"\",\n            \"MethodBayar\": \"\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DetailTrx\": {\n                \"ID\": 0,\n                \"IDTrx\": 0,\n                \"IDLogProduk\": 0,\n                \"IDToko\": 0,\n                \"Kuantitas\": 0,\n                \"HargaTotal\": 0,\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\"\n            }\n        }\n    }\n}"
+				},
+				{
+					"name": "Update User",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama\": \"Admin Toko DIY\",\n    \"tanggal_lahir\": \"2002-07-21\",\n    \"jenis_kelamin\": \"Laki-laki\",\n    \"tentang\": \"Pekerja\",\n    \"pekerjaan\": \"Admin toko DIY\",\n    \"id_provinsi\": \"35\",\n    \"id_kota\": \"3578\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/users/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 29 Sep 2025 04:31:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "960"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Profile updated successfully\",\n    \"user\": {\n        \"ID\": 2,\n        \"Nama\": \"Admin Toko DIY\",\n        \"KataSandi\": \"$2a$10$9Z2PIusb3b8MSCbYjPgHKutQuDT3CN3tSFz3o67Lc.S6m4Ud3KEjK\",\n        \"NoTelp\": \"12345\",\n        \"TanggalLahir\": \"2002-07-21T00:00:00Z\",\n        \"JenisKelamin\": \"Laki-laki\",\n        \"Tentang\": \"Pekerja\",\n        \"Pekerjaan\": \"Admin toko DIY\",\n        \"Email\": \"Tes1@contoh.com\",\n        \"IDProvinsi\": \"35\",\n        \"IDKota\": \"3578\",\n        \"IsAdmin\": true,\n        \"CreatedAt\": \"2025-09-28T16:50:47.772+07:00\",\n        \"UpdatedAt\": \"2025-09-29T11:31:43.669+07:00\",\n        \"Toko\": {\n            \"ID\": 0,\n            \"IDUser\": 0,\n            \"NamaToko\": \"\",\n            \"URLFoto\": \"\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"Produk\": null,\n            \"DetailTrx\": null,\n            \"LogProduk\": null\n        },\n        \"Alamat\": null,\n        \"Trx\": {\n            \"ID\": 0,\n            \"IDUser\": 0,\n            \"AlamatPengiriman\": 0,\n            \"TotalHarga\": 0,\n            \"KodeInvoice\": \"\",\n            \"MethodBayar\": \"\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DetailTrx\": {\n                \"ID\": 0,\n                \"IDTrx\": 0,\n                \"IDLogProduk\": 0,\n                \"IDToko\": 0,\n                \"Kuantitas\": 0,\n                \"HargaTotal\": 0,\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\"\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Toko",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/tokos/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"tokos",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 12:17:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "192"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 2,\n    \"IDUser\": 2,\n    \"NamaToko\": \"Tes1 Store\",\n    \"URLFoto\": \"\",\n    \"CreatedAt\": \"2025-09-28T16:50:47.781+07:00\",\n    \"UpdatedAt\": \"2025-09-28T16:50:47.781+07:00\",\n    \"Produk\": null,\n    \"DetailTrx\": null,\n    \"LogProduk\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Toko",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNDM1NjYsInVzZXJfaWQiOjJ9.mawdg4JdAkKeCQiX2fL8uyQzovGYn6rjE9qgHi122xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama_toko\": \"Toko DIY\",\n    \"url_foto\": \"https://www.mrdiy.com/id/public/files/f06fc1bf0b7640a0533f047ec8f4dd96013bd32960ce1e7e8184fedb9499e398.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/tokos/me",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"tokos",
+						"me"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Toko DIY",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_toko\": \"Toko DIY\",\n    \"url_foto\": \"https://www.mrdiy.com/id/public/files/f06fc1bf0b7640a0533f047ec8f4dd96013bd32960ce1e7e8184fedb9499e398.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/tokos/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"tokos",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 12:23:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "329"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Toko updated\",\n    \"toko\": {\n        \"ID\": 2,\n        \"IDUser\": 2,\n        \"NamaToko\": \"Toko DIY\",\n        \"URLFoto\": \"https://www.mrdiy.com/id/public/files/f06fc1bf0b7640a0533f047ec8f4dd96013bd32960ce1e7e8184fedb9499e398.jpg\",\n        \"CreatedAt\": \"2025-09-28T16:50:47.781+07:00\",\n        \"UpdatedAt\": \"2025-09-28T19:23:42.58+07:00\",\n        \"Produk\": null,\n        \"DetailTrx\": null,\n        \"LogProduk\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Upload Foto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNDM1NjYsInVzZXJfaWQiOjJ9.mawdg4JdAkKeCQiX2fL8uyQzovGYn6rjE9qgHi122xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "postman-cloud:///1f09c66d-5d55-42d0-86fd-73388f6f9ab8"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/tokos/upload_foto",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"tokos",
+						"upload_foto"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "postman-cloud:///1f09c66d-5d55-42d0-86fd-73388f6f9ab8"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/tokos/upload_foto",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"tokos",
+								"upload_foto"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 12:44:48 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Foto toko berhasil diupload\",\n    \"url_foto\": \"./upload/toko/TokoDIY.jpg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Alamat",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNDM1NjYsInVzZXJfaWQiOjJ9.mawdg4JdAkKeCQiX2fL8uyQzovGYn6rjE9qgHi122xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "postman-cloud:///1f09c66d-5d55-42d0-86fd-73388f6f9ab8"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/alamat",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"alamat"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "postman-cloud:///1f09c66d-5d55-42d0-86fd-73388f6f9ab8"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/alamat",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"alamat"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 14:35:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "531"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 1,\n        \"IDUser\": 2,\n        \"JudulAlamat\": \"Jalan Keputih 2\",\n        \"NamaPenerima\": \"Pembeli 1\",\n        \"NoTelp\": \"9999\",\n        \"DetailAlamat\": \"no 109\",\n        \"UpdatedAt\": \"2025-09-28T21:34:52.658+07:00\",\n        \"CreatedAt\": \"2025-09-28T21:34:52.658+07:00\",\n        \"Trx\": {\n            \"ID\": 0,\n            \"IDUser\": 0,\n            \"AlamatPengiriman\": 0,\n            \"TotalHarga\": 0,\n            \"KodeInvoice\": \"\",\n            \"MethodBayar\": \"\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DetailTrx\": {\n                \"ID\": 0,\n                \"IDTrx\": 0,\n                \"IDLogProduk\": 0,\n                \"IDToko\": 0,\n                \"Kuantitas\": 0,\n                \"HargaTotal\": 0,\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\"\n            }\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create Alamat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNDM1NjYsInVzZXJfaWQiOjJ9.mawdg4JdAkKeCQiX2fL8uyQzovGYn6rjE9qgHi122xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/alamat",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"alamat"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"judul_alamat\": \"Jalan Keputih 2\",\n    \"nama_penerima\": \"Pembeli 1\",\n    \"notelp\": \"9999\",\n    \"detail_alamat\": \"no 109\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/alamat",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"alamat"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 14:34:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "581"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"alamat\": {\n        \"ID\": 1,\n        \"IDUser\": 2,\n        \"JudulAlamat\": \"Jalan Keputih 2\",\n        \"NamaPenerima\": \"Pembeli 1\",\n        \"NoTelp\": \"9999\",\n        \"DetailAlamat\": \"no 109\",\n        \"UpdatedAt\": \"2025-09-28T21:34:52.658378+07:00\",\n        \"CreatedAt\": \"2025-09-28T21:34:52.658377+07:00\",\n        \"Trx\": {\n            \"ID\": 0,\n            \"IDUser\": 0,\n            \"AlamatPengiriman\": 0,\n            \"TotalHarga\": 0,\n            \"KodeInvoice\": \"\",\n            \"MethodBayar\": \"\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DetailTrx\": {\n                \"ID\": 0,\n                \"IDTrx\": 0,\n                \"IDLogProduk\": 0,\n                \"IDToko\": 0,\n                \"Kuantitas\": 0,\n                \"HargaTotal\": 0,\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\"\n            }\n        }\n    },\n    \"message\": \"Alamat berhasil dibuat\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Alamat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNDM1NjYsInVzZXJfaWQiOjJ9.mawdg4JdAkKeCQiX2fL8uyQzovGYn6rjE9qgHi122xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"judul_alamat\": \"Jalan Klampis 2\",\n    \"nama_penerima\": \"Agus Setiawan\",\n    \"detail_alamat\": \"No 17\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/alamat/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"alamat",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"judul_alamat\": \"Jalan Klampis 2\",\n    \"nama_penerima\": \"Agus Setiawan\",\n    \"detail_alamat\": \"No 17\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/alamat/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"alamat",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 14:47:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "580"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"alamat\": {\n        \"ID\": 1,\n        \"IDUser\": 2,\n        \"JudulAlamat\": \"Jalan Klampis 2\",\n        \"NamaPenerima\": \"Agus Setiawan\",\n        \"NoTelp\": \"9999\",\n        \"DetailAlamat\": \"No 17\",\n        \"UpdatedAt\": \"2025-09-28T21:47:09.008+07:00\",\n        \"CreatedAt\": \"2025-09-28T21:34:52.658+07:00\",\n        \"Trx\": {\n            \"ID\": 0,\n            \"IDUser\": 0,\n            \"AlamatPengiriman\": 0,\n            \"TotalHarga\": 0,\n            \"KodeInvoice\": \"\",\n            \"MethodBayar\": \"\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"DetailTrx\": {\n                \"ID\": 0,\n                \"IDTrx\": 0,\n                \"IDLogProduk\": 0,\n                \"IDToko\": 0,\n                \"Kuantitas\": 0,\n                \"HargaTotal\": 0,\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\"\n            }\n        }\n    },\n    \"message\": \"Alamat berhasil diupdate\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Alamat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNDM1NjYsInVzZXJfaWQiOjJ9.mawdg4JdAkKeCQiX2fL8uyQzovGYn6rjE9qgHi122xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"judul_alamat\": \"Jalan Klampis 2\",\n    \"nama_penerima\": \"Agus Setiawan\",\n    \"detail_alamat\": \"No 17\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/alamat/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"alamat",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"judul_alamat\": \"Jalan Klampis 2\",\n    \"nama_penerima\": \"Agus Setiawan\",\n    \"detail_alamat\": \"No 17\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/alamat/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"alamat",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 14:47:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Alamat berhasil dihapus\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNTg1ODYsImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyfQ.q9NtWgQJqubZUFbKYB5LnMAZDPSwSz4ZebTYUQJx-cs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama_category\": \"Elektronik\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/kategori",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"kategori"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_category\": \"Elektronik\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/kategori",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"kategori"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 15:14:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "848"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"kategori\": {\n        \"ID\": 2,\n        \"NamaCategory\": \"Elektronik\",\n        \"CreatedAt\": \"2025-09-28T22:14:10.867815+07:00\",\n        \"UpdatedAt\": \"2025-09-28T22:14:10.867815+07:00\",\n        \"Produk\": {\n            \"ID\": 0,\n            \"NamaProduk\": \"\",\n            \"Slug\": \"\",\n            \"HargaReseller\": \"\",\n            \"HargaKonsumen\": \"\",\n            \"Stok\": 0,\n            \"Deskripsi\": \"\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"IDToko\": 0,\n            \"IDCategory\": 0,\n            \"FotoProduk\": null,\n            \"LogProduk\": {\n                \"ID\": 0,\n                \"IDProduk\": 0,\n                \"NamaProduk\": \"\",\n                \"Slug\": \"\",\n                \"HargaReseller\": 0,\n                \"HargaKonsumen\": 0,\n                \"Deskripsi\": \"\",\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"IDToko\": 0,\n                \"IDCategory\": 0,\n                \"DetailTrx\": null\n            }\n        },\n        \"LogProduk\": {\n            \"ID\": 0,\n            \"IDProduk\": 0,\n            \"NamaProduk\": \"\",\n            \"Slug\": \"\",\n            \"HargaReseller\": 0,\n            \"HargaKonsumen\": 0,\n            \"Deskripsi\": \"\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"IDToko\": 0,\n            \"IDCategory\": 0,\n            \"DetailTrx\": null\n        }\n    },\n    \"message\": \"Kategori berhasil dibuat\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNTg1ODYsImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyfQ.q9NtWgQJqubZUFbKYB5LnMAZDPSwSz4ZebTYUQJx-cs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama_category\": \"Elektronik\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/kategori",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"kategori"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nama_category\": \"Elektronik\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/kategori",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"kategori"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 15:15:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "794"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 2,\n        \"NamaCategory\": \"Elektronik\",\n        \"CreatedAt\": \"2025-09-28T22:14:10.867+07:00\",\n        \"UpdatedAt\": \"2025-09-28T22:14:10.867+07:00\",\n        \"Produk\": {\n            \"ID\": 0,\n            \"NamaProduk\": \"\",\n            \"Slug\": \"\",\n            \"HargaReseller\": \"\",\n            \"HargaKonsumen\": \"\",\n            \"Stok\": 0,\n            \"Deskripsi\": \"\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"IDToko\": 0,\n            \"IDCategory\": 0,\n            \"FotoProduk\": null,\n            \"LogProduk\": {\n                \"ID\": 0,\n                \"IDProduk\": 0,\n                \"NamaProduk\": \"\",\n                \"Slug\": \"\",\n                \"HargaReseller\": 0,\n                \"HargaKonsumen\": 0,\n                \"Deskripsi\": \"\",\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"IDToko\": 0,\n                \"IDCategory\": 0,\n                \"DetailTrx\": null\n            }\n        },\n        \"LogProduk\": {\n            \"ID\": 0,\n            \"IDProduk\": 0,\n            \"NamaProduk\": \"\",\n            \"Slug\": \"\",\n            \"HargaReseller\": 0,\n            \"HargaKonsumen\": 0,\n            \"Deskripsi\": \"\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"IDToko\": 0,\n            \"IDCategory\": 0,\n            \"DetailTrx\": null\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Update Kategori",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNTg1ODYsImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyfQ.q9NtWgQJqubZUFbKYB5LnMAZDPSwSz4ZebTYUQJx-cs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama_category\": \"Kopi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/kategori/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"kategori",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Kategori",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 15:17:24 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "838"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"kategori\": {\n        \"ID\": 2,\n        \"NamaCategory\": \"Kopi\",\n        \"CreatedAt\": \"2025-09-28T22:14:10.867+07:00\",\n        \"UpdatedAt\": \"2025-09-28T22:17:24.776+07:00\",\n        \"Produk\": {\n            \"ID\": 0,\n            \"NamaProduk\": \"\",\n            \"Slug\": \"\",\n            \"HargaReseller\": \"\",\n            \"HargaKonsumen\": \"\",\n            \"Stok\": 0,\n            \"Deskripsi\": \"\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"IDToko\": 0,\n            \"IDCategory\": 0,\n            \"FotoProduk\": null,\n            \"LogProduk\": {\n                \"ID\": 0,\n                \"IDProduk\": 0,\n                \"NamaProduk\": \"\",\n                \"Slug\": \"\",\n                \"HargaReseller\": 0,\n                \"HargaKonsumen\": 0,\n                \"Deskripsi\": \"\",\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"IDToko\": 0,\n                \"IDCategory\": 0,\n                \"DetailTrx\": null\n            }\n        },\n        \"LogProduk\": {\n            \"ID\": 0,\n            \"IDProduk\": 0,\n            \"NamaProduk\": \"\",\n            \"Slug\": \"\",\n            \"HargaReseller\": 0,\n            \"HargaKonsumen\": 0,\n            \"Deskripsi\": \"\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"IDToko\": 0,\n            \"IDCategory\": 0,\n            \"DetailTrx\": null\n        }\n    },\n    \"message\": \"Kategori berhasil diupdate\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNTg1ODYsImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyfQ.q9NtWgQJqubZUFbKYB5LnMAZDPSwSz4ZebTYUQJx-cs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nama_produk\": \"Panama Geisha\",\n  \"slug\": \"geisha-panama\",\n  \"harga_reseller\": \"110000\",\n  \"harga_konsumen\": \"220000\",\n  \"stok\": 20,\n  \"deskripsi\": \"Jasmine, Rose, Grapefruit, Bergamout, Tangerine\",\n  \"id_category\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/produk",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"produk"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nama_produk\": \"Panama Geisha\",\n  \"slug\": \"geisha-panama\",\n  \"harga_reseller\": \"110000\",\n  \"harga_konsumen\": \"220000\",\n  \"stok\": 20,\n  \"deskripsi\": \"Jasmine, Rose, Grapefruit, Bergamout, Tangerine\",\n  \"id_category\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/produk",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"produk"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 15:53:22 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "590"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Produk berhasil dibuat\",\n    \"produk\": {\n        \"ID\": 1,\n        \"NamaProduk\": \"Panama Geisha\",\n        \"Slug\": \"geisha-panama\",\n        \"HargaReseller\": \"110000\",\n        \"HargaKonsumen\": \"220000\",\n        \"Stok\": 20,\n        \"Deskripsi\": \"Jasmine, Rose, Grapefruit, Bergamout, Tangerine\",\n        \"CreatedAt\": \"2025-09-28T22:53:22.497775+07:00\",\n        \"UpdatedAt\": \"2025-09-28T22:53:22.497775+07:00\",\n        \"IDToko\": 2,\n        \"IDCategory\": 2,\n        \"FotoProduk\": null,\n        \"LogProduk\": {\n            \"ID\": 0,\n            \"IDProduk\": 0,\n            \"NamaProduk\": \"\",\n            \"Slug\": \"\",\n            \"HargaReseller\": 0,\n            \"HargaKonsumen\": 0,\n            \"Deskripsi\": \"\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"IDToko\": 0,\n            \"IDCategory\": 0,\n            \"DetailTrx\": null\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Produk",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNTg1ODYsImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyfQ.q9NtWgQJqubZUFbKYB5LnMAZDPSwSz4ZebTYUQJx-cs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nama_produk\": \"Panama Geisha\",\n  \"slug\": \"geisha-panama\",\n  \"harga_reseller\": \"110000\",\n  \"harga_konsumen\": \"220000\",\n  \"stok\": 20,\n  \"deskripsi\": \"Jasmine, Rose, Grapefruit, Bergamout, Tangerine\",\n  \"id_category\": 2\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/produk/myproduk",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"produk",
+						"myproduk"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nama_produk\": \"Panama Geisha\",\n  \"slug\": \"geisha-panama\",\n  \"harga_reseller\": \"110000\",\n  \"harga_konsumen\": \"220000\",\n  \"stok\": 20,\n  \"deskripsi\": \"Jasmine, Rose, Grapefruit, Bergamout, Tangerine\",\n  \"id_category\": 2\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/produk/myproduk",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"produk",
+								"myproduk"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 16:21:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "540"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 1,\n        \"NamaProduk\": \"Panama Geisha\",\n        \"Slug\": \"geisha-panama\",\n        \"HargaReseller\": \"110000\",\n        \"HargaKonsumen\": \"220000\",\n        \"Stok\": 20,\n        \"Deskripsi\": \"Jasmine, Rose, Grapefruit, Bergamout, Tangerine\",\n        \"CreatedAt\": \"2025-09-28T22:53:22.497+07:00\",\n        \"UpdatedAt\": \"2025-09-28T22:53:22.497+07:00\",\n        \"IDToko\": 2,\n        \"IDCategory\": 2,\n        \"FotoProduk\": null,\n        \"LogProduk\": {\n            \"ID\": 0,\n            \"IDProduk\": 0,\n            \"NamaProduk\": \"\",\n            \"Slug\": \"\",\n            \"HargaReseller\": 0,\n            \"HargaKonsumen\": 0,\n            \"Deskripsi\": \"\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"IDToko\": 0,\n            \"IDCategory\": 0,\n            \"DetailTrx\": null\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Upload Foto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNTg1ODYsImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyfQ.q9NtWgQJqubZUFbKYB5LnMAZDPSwSz4ZebTYUQJx-cs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "postman-cloud:///1f09c87b-21e8-4cf0-897f-321891341092"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/produk/upload_foto/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"produk",
+						"upload_foto",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "postman-cloud:///1f09c87b-21e8-4cf0-897f-321891341092"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/produk/upload_foto/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"produk",
+								"upload_foto",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 16:29:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "90"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Foto produk berhasil diupload\",\n    \"url_foto\": \"./upload/produk/Panama_Geisha.jpg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNTg1ODYsImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyfQ.q9NtWgQJqubZUFbKYB5LnMAZDPSwSz4ZebTYUQJx-cs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"stok\": 15\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/produk/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"produk",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"stok\": 15\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/produk/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"produk",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 16:32:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "586"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Produk berhasil diupdate\",\n    \"produk\": {\n        \"ID\": 1,\n        \"NamaProduk\": \"Panama Geisha\",\n        \"Slug\": \"geisha-panama\",\n        \"HargaReseller\": \"110000\",\n        \"HargaKonsumen\": \"220000\",\n        \"Stok\": 15,\n        \"Deskripsi\": \"Jasmine, Rose, Grapefruit, Bergamout, Tangerine\",\n        \"CreatedAt\": \"2025-09-28T22:53:22.497+07:00\",\n        \"UpdatedAt\": \"2025-09-28T23:32:22.414+07:00\",\n        \"IDToko\": 2,\n        \"IDCategory\": 2,\n        \"FotoProduk\": null,\n        \"LogProduk\": {\n            \"ID\": 0,\n            \"IDProduk\": 0,\n            \"NamaProduk\": \"\",\n            \"Slug\": \"\",\n            \"HargaReseller\": 0,\n            \"HargaKonsumen\": 0,\n            \"Deskripsi\": \"\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"IDToko\": 0,\n            \"IDCategory\": 0,\n            \"DetailTrx\": null\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Transaksi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNTg1ODYsImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyfQ.q9NtWgQJqubZUFbKYB5LnMAZDPSwSz4ZebTYUQJx-cs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"alamat_pengiriman\": 2,\n  \"produk_list\": [\n    {\n      \"id_produk\": 1,\n      \"kuantitas\": 2\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/transaksi",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"transaksi"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"alamat_pengiriman\": 2,\n  \"produk_list\": [\n    {\n      \"id_produk\": 1,\n      \"kuantitas\": 2\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/transaksi",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"transaksi"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 17:50:29 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "50"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Transaksi berhasil dibuat\",\n    \"trx_id\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Transaksi",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTkxNTg1ODYsImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyfQ.q9NtWgQJqubZUFbKYB5LnMAZDPSwSz4ZebTYUQJx-cs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"alamat_pengiriman\": 2,\n  \"produk_list\": [\n    {\n      \"id_produk\": 1,\n      \"kuantitas\": 2\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/transaksi/?page=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"transaksi",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"alamat_pengiriman\": 2,\n  \"produk_list\": [\n    {\n      \"id_produk\": 1,\n      \"kuantitas\": 2\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/transaksi/?page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"transaksi",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 28 Sep 2025 17:53:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "336"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 1,\n        \"IDUser\": 2,\n        \"AlamatPengiriman\": 2,\n        \"TotalHarga\": 0,\n        \"KodeInvoice\": \"\",\n        \"MethodBayar\": \"\",\n        \"UpdatedAt\": \"2025-09-29T00:50:30.159+07:00\",\n        \"CreatedAt\": \"2025-09-29T00:50:30.159+07:00\",\n        \"DetailTrx\": {\n            \"ID\": 0,\n            \"IDTrx\": 0,\n            \"IDLogProduk\": 0,\n            \"IDToko\": 0,\n            \"Kuantitas\": 0,\n            \"HargaTotal\": 0,\n            \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n            \"CreatedAt\": \"0001-01-01T00:00:00Z\"\n        }\n    }\n]"
+				}
+			]
+		}
+	]
+}
