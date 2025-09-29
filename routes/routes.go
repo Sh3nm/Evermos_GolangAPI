@@ -14,8 +14,8 @@ func SetupRoutes(app *fiber.App) {
 	})
 
 	// Auth
-	app.Post("/register", controllers.Register)
-	app.Post("/login", controllers.Login)
+	app.Post("/auth/register", controllers.Register)
+	app.Post("/auth/login", controllers.Login)
 
 	// User
 	user := app.Group("/users", middlewares.JWTProtected())
